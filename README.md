@@ -1,5 +1,9 @@
 # Pen Classification Under Distribution Shift
 
+![Python](https://img.shields.io/badge/Python-3.10-blue)
+![PyTorch](https://img.shields.io/badge/PyTorch-DeepLearning-red)
+![Kaggle](https://img.shields.io/badge/Kaggle-Competition-blue)
+
 This project addresses an 8-class image classification task for identifying pen types from handwritten images. Developed as part of a Kaggle competition, it achieved a **top 30% leaderboard rank (116/389)**.
 
 ------------------------------------------------------------------------
