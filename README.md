@@ -84,11 +84,11 @@ This project addresses an 8-class image classification task for identifying pen 
 
 | Model | Validation Accuracy |
 |-------|---------------------|
-| ResNet50 | ~89% |
-| ConvNeXt-Tiny | ~89% |
-| EfficientNet-B4 | ~89% |
-| Swin-Tiny | ~89% |
-| **Ensemble** | **~89.9%** |
+| ResNet50 | 89.661% |
+| ConvNeXt-Tiny | 88.761% |
+| EfficientNet-B4 | 88.226% |
+| Swin-Tiny | 88.542% |
+| **Ensemble** | **~89.929%** |
 
 > Ensemble gains were modest due to high correlation between model errors.
 
@@ -108,32 +108,42 @@ This project addresses an 8-class image classification task for identifying pen 
 
 ```
 kaggle-pen-classification/
-├── notebooks/                          # Jupyter notebooks for model experimentation
-│   ├── resnet34.ipynb
-│   ├── resnet50_.ipynb
+│
+├── images/                # Dataset images (ignored in Git)
+│
+├── notebooks/             # Experimentation notebooks
 │   ├── convnext_tiny.ipynb
 │   ├── efficientnetb4.ipynb
-│   ├── swin_tiny.ipynb
-│   ├── resent34_da.ipynb               # ResNet34 with data augmentation
-│   └── ensemble.ipynb                  # Ensemble model combining multiple architectures
-├── scripts/                            # Python scripts for training and inference
-│   ├── train.py                        # Model training pipeline
-│   └── inference.py                    # Inference/prediction script
-├── submissions/                        # Kaggle submission files
-│   ├── submission_resnet50.csv
-│   ├── submission_convnext_tiny.csv
-│   ├── submission_efficientnet_b4.csv
-│   ├── submission_swin_tiny.csv
-│   └── submission_ensemble.csv
-├── models/                             # Directory for trained model weights (currently empty)
-├── train.csv                           # Training dataset
-├── test.csv                            # Test dataset
-├── requirements.txt                    # Python package dependencies
-├── README.md                           # Project documentation
-├── .gitignore                          # Git ignore patterns
-├── .gitattributes                      # Git attributes
-└── .git/                               # Git repository metadata
+│   ├── ensemble.ipynb
+│   ├── resnet34_da.ipynb
+│   ├── resnet34.ipynb
+│   ├── resnet50.ipynb
+│   └── swin_tiny.ipynb
+│
+├── scripts/               # Core training & inference code
+│   ├── train.py
+│   ├── inference.py
+│   └── __pycache__/       # Python cache (ignored)
+│
+├── train.csv              # Training labels
+├── test.csv               # Test data
+│
+├── README.md              # Project documentation
+├── requirements.txt       # Dependencies
+└── .gitignore             # Ignored files (images, models, etc.)
 ```
+
+---
+
+## 📌 Notes
+
+* `images/` is excluded from Git to avoid large uploads
+* `notebooks/` contains model experiments and comparisons
+* `scripts/` holds reusable production code
+* CSV files define dataset splits and labels
+
+---
+
 
 ------------------------------------------------------------------------
 
@@ -148,8 +158,8 @@ kaggle-pen-classification/
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/rajesh22764/kaggle-pen-classification.git
-   cd kaggle-pen-classification
+   git clone https://github.com/rajesh22764/kaggle-pen-classification_.git
+   cd kaggle-pen-classification_
    ```
 
 2. Install dependencies:
